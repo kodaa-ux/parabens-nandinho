@@ -186,7 +186,7 @@ html.lock, html.lock body { overflow: hidden; }
 .s1-bottom { display: flex; flex-direction: column; align-items: center; gap: 8px; padding-bottom: 6px; }
 .cta { min-height: 66px; padding: 0 34px; font: 400 clamp(24px, 6vw, 34px)/1 var(--display); letter-spacing: .04em; }
 .cta-note { font: 400 19px/1 var(--mono); color: var(--white); text-shadow: 1px 1px 0 var(--ink); }
-.pick-title { font: 400 clamp(38px, 9vw, 76px)/.95 var(--display); letter-spacing: .02em; color: var(--white); text-shadow: 3px 3px 0 var(--ink), -2px -2px 0 var(--ink), 2px -2px 0 var(--ink), -2px 2px 0 var(--ink), 0 6px 0 var(--ink); }
+.pick-title { margin-bottom: 10px; font: 400 clamp(38px, 9vw, 76px)/.95 var(--display); letter-spacing: .02em; color: var(--white); text-shadow: 3px 3px 0 var(--ink), -2px -2px 0 var(--ink), 2px -2px 0 var(--ink), -2px 2px 0 var(--ink), 0 6px 0 var(--ink); }
 .pick-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(10px, 2vw, 18px); width: 100%; }
 .card { display: flex; flex-direction: column; min-width: 0; padding: 3px; background: var(--win); box-shadow: var(--bevel); border: 0; font: inherit; color: var(--ink); text-align: left; cursor: pointer; position: relative; }
 .card .win-title { font-size: 12px; padding: 3px 6px; }
@@ -231,8 +231,19 @@ html.lock, html.lock body { overflow: hidden; }
 @keyframes stampIn { from { opacity: 0; transform: translate(-50%, -50%) rotate(-12deg) scale(3); } to { opacity: 1; transform: translate(-50%, -50%) rotate(-12deg) scale(1); } }
 @media (max-width: 720px) {
   .pick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .portrait { aspect-ratio: 6 / 5; }
-  .card-meta { font-size: 16px; }
+  .s2 { gap: 8px; }
+  .pick-title { font-size: clamp(30px, 8.4vw, 44px); margin: -6px 0 14px; }
+  .pick-grid { gap: 8px; }
+  .card .win-title { font-size: 11px; padding: 2px 6px; }
+  .card-body { padding: 6px; gap: 4px; }
+  .portrait { aspect-ratio: 4 / 3; }
+  #cardN .portrait img { object-position: 50% 100%; }
+  .card-name { font-size: 20px; }
+  .card-meta { font-size: 13px; line-height: 1.1; }
+  .card.locked .card-meta { display: none; }
+  .padlock { width: 24px; height: 24px; padding: 3px; right: 4px; bottom: 4px; }
+  .status { font-size: 15px; min-height: 0; padding: 5px 8px; }
+  .s2 .cta { min-height: 52px; padding: 0 20px; font-size: clamp(20px, 5.6vw, 26px); position: sticky; bottom: 10px; z-index: 6; }
 }
 @media (max-width: 520px) { .intro { padding-top: 76px; } .intro-bar .chip { padding: 0 11px; font-size: 13px; } .intro-bar #introSkip { padding: 0 13px; } }
 /* galeria */
