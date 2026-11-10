@@ -72,6 +72,9 @@ section[id], header[id] { scroll-margin-top: 14px; }
 .win-body { padding: 18px; display: flex; flex-direction: column; gap: 16px; }
 .sunk { background: var(--white); box-shadow: var(--sunk); padding: 14px; }
 
+/* sem zoom por toque duplo em botões e áreas clicáveis (o pinch de acessibilidade continua) */
+html, body, button, a, .btn, .shot, .card, .chip, label, summary { touch-action: manipulation; }
+button, .btn, .chip, .card { -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
 .btn {
   font: 700 16px/1.2 var(--ui); min-height: 44px; padding: 0 18px;
   background: var(--win); color: var(--ink); border: 0; box-shadow: var(--bevel); cursor: pointer;
